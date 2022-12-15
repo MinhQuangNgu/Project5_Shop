@@ -1,0 +1,104 @@
+.header{
+    width: 100%;
+    background-color: black;
+    &_container{
+        width: 100%;
+    }
+    &_search_container{
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+    }
+    &_search_wrap{
+        background-color: #333333;
+        width: 100%;
+        height: 60%;
+        border-radius: 2rem;
+        display: flex;
+        color:white;
+        overflow: hidden;
+        & > input{
+            background-color: transparent;
+            border: none;
+            width: 90%;
+            padding:0 1.2rem;
+            font-size: 1.4rem;
+            color:white;
+            outline: none;
+            font-family: 'Playfair Display', serif;
+            &::placeholder{
+                color:white;
+            }
+        }
+    }
+    &_search_icon{
+        width: 15%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        cursor: pointer;
+        &:active > i{
+            transform: scale(1.2);
+        }
+    }
+    &_slogan{
+        color:white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        overflow: hidden;
+        font-weight: 800;
+    }
+    &_auth{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        &_link{
+            text-decoration: none;
+            margin-left: 1rem;
+            font-size: 1.4rem;
+            color:white;
+            font-weight: 800;
+            font-family: 'Noto Sans', sans-serif;
+            &:hover{
+                color:#FF8A08;
+            }
+            &:last-child{
+                margin-left: 2rem;
+                font-size: 2rem;
+                position: relative;
+            }
+            &:last-child:hover{
+                color:white;
+            }
+            &_number{
+                position: absolute;
+                top:-0.4rem;
+                right:-0.8rem;
+                background-color: #56CCF2;
+                width: 1.5rem;
+                height: 1.5rem;
+                font-size: 1.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+@media screen and (max-width:1023px){
+    .header_slogan{
+        width: 100%;
+        height: 4rem;
+        font-size: 0.95rem;
+    }
+}
