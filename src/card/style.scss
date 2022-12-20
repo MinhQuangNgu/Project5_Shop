@@ -1,0 +1,24 @@
+@import '../style.module.scss';
+
+.card{
+    width: 100%;
+    height: 29rem;
+    border-radius: 1.2rem;
+    margin-bottom: 2rem;
+    background-color: white;
+    box-shadow: 0 0 0.2rem 0.1rem rgba(0,0,0,0.2);
+    overflow: hidden;
+    @include middleSmall{
+        height: 40rem;
+    }
+    &_img{
+        width: 100%;
+        height: 70%;
+        & > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

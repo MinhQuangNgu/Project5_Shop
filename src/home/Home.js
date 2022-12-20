@@ -2,6 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import "./style.scss";
 import SwiperJS from "../swiper/SwiperJS";
+import Card from "../card/Card";
 const Home = () => {
     return (
         <div className="home_container">
@@ -27,6 +28,36 @@ const Home = () => {
                             </div>
                             <div className="col c-12 m-12 l-0">
                                 <SwiperJS num={1} />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="home_items_wrap">
+                        <div className="home_items_title">
+                            <h2>Khám phá món mới</h2>
+                        </div>
+                        <div className="home_items_card">
+                            <div className="row">
+                                <div className="col c-6 m-4 l-2">
+                                    <Card />
+                                </div>
+                                <div className="col c-6 m-4 l-2">
+                                    <Card />
+                                </div>
+                                <div className="col c-6 m-4 l-2">
+                                    <Card />
+                                </div>
+                                <div className="col c-6 m-4 l-2">
+                                    <Card />
+                                </div>
+                                <div className="col c-6 m-4 l-2">
+                                    <Card />
+                                </div>
+                                <div className="col c-6 m-4 l-2">
+                                    <Card />
+                                </div>
+                                <div className="col c-6 m-4 l-2">
+                                    <Card />
+                                </div>
                             </div>
                         </div>
                     </div>

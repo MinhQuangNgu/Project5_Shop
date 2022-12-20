@@ -2,14 +2,15 @@
 
 .swiper_card_img{
     width: 100%;
-    height: 20rem;
+    height: 22rem;
     object-fit: cover;
     @include middleSmall{
-        height: 25rem;
+        height: 30rem;
     }
     @include tablet{
-        height: 25rem;
+        height: 27rem;
     }
+    border-radius: 2rem;
 }
 .swiper-button-prev{
     width: 3rem !important;
