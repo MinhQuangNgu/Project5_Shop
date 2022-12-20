@@ -221,6 +221,11 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+            <div className="header_searching_container">
+                <div className="header_searching_title">
+                    Đặt món nào cũng <span>mất tiền ship</span>
+                </div>
+            </div>
         </div>
     );
 };

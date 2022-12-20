@@ -1,3 +1,6 @@
+
+@import '../../style.module.scss';
+
 .header{
     width: 100%;
     &_container{
@@ -56,6 +59,13 @@
         font-size: 1.3rem;
         overflow: hidden;
         font-weight: 800;
+        text-align: center;
+        @include mobileTablet{
+            width: 100%;
+            height: 4rem;
+            font-size: 0.95rem;
+            text-align: center;
+        }
     }
     &_auth{
         width: 100%;
@@ -70,6 +80,9 @@
             color:white;
             font-weight: 800;
             font-family: 'Noto Sans', sans-serif;
+            @include desktop{
+                font-size: 1.3rem;
+            }
             &:hover{
                 color:#FF8A08;
             }
@@ -127,6 +140,9 @@
                 justify-content: center;
                 cursor: pointer;
                 position: relative;
+                @include desktop{
+                    font-size: 1.5rem;
+                }
                 &:hover .header_navbar_item_detail{
                     display: flex;
                 }
@@ -189,15 +205,6 @@
             color:#FF8A08;
             transform: translateX(0.5rem);
         }
-    }
-
-}
-@media screen and (max-width:1023px){
-    .header_slogan{
-        width: 100%;
-        height: 4rem;
-        font-size: 0.95rem;
-        text-align: center;
     }
 }
 @mixin borderCircle($paddingTop:1rem,$paddingLeft:1rem){
@@ -394,5 +401,54 @@ $timeChange:0.5s;
     }
     100%{
         transform: translateX(0%);
+    }
+}
+.header_searching_container{
+    width: 100%;
+    height: 42rem;
+    background-image: url("https://res.cloudinary.com/sttruyen/image/upload/v1671500313/stphim/uedliybsrg9dz58qnrmb.webp");
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    @include mobile{
+        height: 20rem;
+    }
+    @include tablet{
+        height: 35rem;
+    }
+    @include middleSmall{
+        height: 30rem;
+    }
+}
+.header_searching{
+    &_title{
+        width: 70%;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 6rem;
+        flex-direction: column;
+        font-weight: 800;
+        text-transform: uppercase;
+        color:rgba(0,0,0,0.7);
+        & > span{
+            color:rgba(255,0,0,0.8);
+        }
+        @include mobile{
+            width: 80%;
+            height: 70%;
+            font-size: 2.5rem;
+        }
+        @include tablet{
+            width: 70%;
+            font-size: 5rem;
+        }
+        @include middleSmall{
+            width: 80%;
+            font-size: 4.5rem;
+        }
     }
 }

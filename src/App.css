@@ -3,9 +3,10 @@
   padding:0;
   box-sizing: inherit;
 }
-.App{
-overflow: hidden;
-background-color: #EBEBEB;
+.app_container{
+  overflow: hidden;
+  min-height: 100vh;
+  background-color: #EBEBEB;
 }
 html{
   box-sizing: border-box;
