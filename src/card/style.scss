@@ -8,17 +8,98 @@
     background-color: white;
     box-shadow: 0 0 0.2rem 0.1rem rgba(0,0,0,0.2);
     overflow: hidden;
+    position: relative;
     @include middleSmall{
         height: 40rem;
     }
     &_img{
         width: 100%;
-        height: 70%;
+        height: 53%;
+        overflow: hidden;
+        @include middleSmall{
+            height: 63%;
+        }
         & > img{
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center;
+            transition: all ease 0.2s;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+    &_infor{
+        width: 100%;
+        height: 47%;
+        @include middleSmall{
+            height: 37%;
+        }
+        &_title{
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            text-overflow: ellipsis;
+            font-size: 1.7rem;
+            overflow: hidden;
+            padding:0.5rem;
+            color:black;
+            font-family: "Noto Sans", sans-serif;
+            -webkit-box-orient: vertical;
+            height: 5.8rem;
+            text-align: center;
+            text-transform: capitalize;
+        }
+        &_price{
+            display: flex;
+            padding:0 0.8rem;
+            justify-content: space-between;
+            font-size: 1.5rem;
+            align-items: flex-end;
+            color:rgba(0,0,0,0.6);
+            font-weight: 800;
+            @include mobile{
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+            }
+            @include middleSmall{
+                padding:0 1.5rem;
+                font-size: 1.8rem;
+            }
+            &_old{
+                color:red;
+            }
+            &_new{
+                font-size: 1.8rem;
+                text-decoration: line-through;
+                @include mobile{
+                    font-size: 1.5rem;
+                }
+                @include middleSmall{
+                    font-size: 2.5rem;
+                }
+            }
+        }
+        &_button{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 0.5rem;
+            & > button{
+                width: 90%;
+                height: 4rem;
+                background-color: #EBEBEB;
+                outline: none;
+                border:none;
+                border-radius: 5rem;
+                font-size: 1.7rem;
+                font-weight: 500;
+                color:rgba(0,0,0,0.7);
+                cursor: pointer;
+                &:hover{
+                    transform: scale(0.9);
+                }
+            }
         }
     }
 }
