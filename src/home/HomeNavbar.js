@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Card from "../card/Card";
 import "./style.scss";
 const HomeNavbar = ({ name }) => {
@@ -46,6 +47,17 @@ const HomeNavbar = ({ name }) => {
                         <Card />
                     </div>
                 </div>
+            </div>
+            <div className="home_items_more">
+                <Link className="home_items_more_detail" to="/">
+                    <i>
+                        Xem tất cả{" "}
+                        <i
+                            style={{ fontSize: "1.5rem" }}
+                            className="fa-solid fa-angle-right"
+                        ></i>
+                    </i>
+                </Link>
             </div>
         </div>
     );

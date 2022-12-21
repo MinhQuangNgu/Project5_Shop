@@ -32,6 +32,7 @@ const Home = () => {
                     </div>
                     <HomeNavbar name="Khám phá món mới" />
                     <HomeNavbar name="Món yêu thích" />
+                    <HomeNavbar name="Món Đặt nhiều" />
                 </div>
             </div>
         </div>
