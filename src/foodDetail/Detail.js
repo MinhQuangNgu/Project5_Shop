@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./style.scss";
 const Detail = () => {
@@ -6,11 +6,23 @@ const Detail = () => {
 
     const [quantity, setQuantity] = useState(1);
 
+    const [star, setStar] = useState(null);
+    const [hover, setHover] = useState(null);
+
+    const starArr = Array(5).fill(0);
+
     const [type, setType] = useState(1);
 
     const clipPath = {
         clipPath: "inset(0% 20% 0% 0%)",
     };
+
+    const contentRef = useRef(null);
+    useEffect(() => {
+        if (contentRef.current) {
+            contentRef.current.innerHTML = "";
+        }
+    }, [slug, contentRef]);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -243,6 +255,53 @@ const Detail = () => {
                                 }
                             >
                                 Đánh Giá
+                            </div>
+                        </div>
+                    </div>
+                    <div className="detail_body_infor">
+                        {type === 1 && (
+                            <div
+                                ref={contentRef}
+                                className="detail_body_infor_content_1"
+                            ></div>
+                        )}
+                        <div className="detail_body_infor_content_2">
+                            <div className="detail_body_infor_content_title">
+                                <div>
+                                    <i
+                                        style={{
+                                            marginRight: "0.5rem",
+                                            marginTop: "0.5rem",
+                                        }}
+                                        className="fa-solid fa-comment"
+                                    ></i>
+                                    <h2>Đánh Giá</h2>
+                                </div>
+                                <div>
+                                    {starArr.map((_, index) => (
+                                        <i
+                                            onMouseOver={() => {
+                                                setHover(index + 1);
+                                            }}
+                                            onMouseLeave={() => {
+                                                setHover(null);
+                                            }}
+                                            onClick={() => {
+                                                setStar(index + 1);
+                                            }}
+                                            key={index + "star"}
+                                            className={
+                                                hover
+                                                    ? hover > index
+                                                        ? "fa-solid fa-star"
+                                                        : "fa-regular fa-star"
+                                                    : star > index
+                                                    ? "fa-solid fa-star"
+                                                    : "fa-regular fa-star"
+                                            }
+                                        ></i>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>

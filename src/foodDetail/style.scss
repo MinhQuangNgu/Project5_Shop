@@ -155,7 +155,7 @@
             }
         }
         &_serves{
-            margin-top: 1rem;
+            margin-top: 1.5rem;
             display: flex;
             flex-wrap: wrap;
             &_items{
@@ -230,6 +230,40 @@
             }
             &_item:first-child{
                 border-right:0.05rem solid rgba(0,0,0,0.2);
+            }
+        }
+    }
+    &_infor{
+        margin-top: 5rem;
+        font-size: 1.8rem;
+        &_content_1{
+            width: 100%;
+            min-height: 10rem;
+            border:1rem solid rgba(0,0,0,0.2);
+            padding:1rem;
+        }
+        &_content{
+            &_2{
+
+            }
+            &_title{
+                display: flex;
+                align-items: center;
+                @include desktopHigh{
+                    padding:0 5rem;
+                }
+                & > div:first-child{
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.8rem;
+                    font-family: Playfair Display,serif;
+                    color:#FF8A08;
+                }
+                & > div:nth-child(2){
+                    margin-left: 2rem;
+                    color:#FFC107;
+                    font-size: 2rem;
+                }
             }
         }
     }
