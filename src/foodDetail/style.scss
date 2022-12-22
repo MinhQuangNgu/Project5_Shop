@@ -17,6 +17,9 @@
         @include mobile{
             height: 28rem;
         }
+        @include tablet{
+            height: 52rem;
+        }
         & > img{
             width: 100%;
             height: 100%;
@@ -60,18 +63,23 @@
             }
         }
         &_title{
-            font-size: 3rem;
+            font-size: 2.8rem;
             cursor: pointer;
             color:rgba(0,0,0,0.7);
             font-family: Old Standard TT,serif;
             @include mobile{
                 font-size: 2.5rem;
             }
+            @include tablet{
+                font-size: 2rem;
+            }
         }
         &_likes{
             width: 100%;
             margin-top: 2rem;
-             & > div{
+            display: flex;
+            align-items: center;
+            &_like{
                 cursor: pointer;
                 width: 12rem;
                 height: 4rem;
@@ -82,7 +90,108 @@
                 font-size: 1.5rem;
                 color:white;
                 border-radius: 02rem;
-             }
+                @include tablet{
+                    width: 10rem;
+                    height: 3.8rem;
+                    font-size:1.4rem;
+                }
+            }
+            &_star{
+                margin-left: 1rem;
+                font-size: 1.9rem;
+                width: auto;
+                color:#FFC107;
+                position: relative;
+                @include mobile{
+                    font-size: 1.7rem;
+                }
+                @include tablet{
+                    font-size:1.3rem;
+                }
+                &-color{
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    right:0;
+                    bottom:0;
+                }
+            }
+            &_number{
+                margin-left: 1.5rem;
+                font-size: 1.7rem;
+                color:#FFC107;
+                font-weight: 600;
+                @include mobile{
+                    font-size: 1.5rem;
+                }
+                @include tablet{
+                    font-size:1.3rem;
+                }
+            }
+        }
+        &_information{
+            margin-top: 1.5rem;
+            font-size: 1.8rem;
+            font-family: 'Chivo Mono', monospace;
+            word-spacing: 0.4rem;
+        }
+        &_price{
+            margin-top: 1rem;
+            font-size: 2.5rem;
+        }
+        &_price_2{
+            margin-top: 1rem;
+            font-size: 2.5rem;
+            display: flex;
+            align-items: flex-end;
+            &_1{
+                font-size: 2.1rem;
+                margin-right: 1rem;
+                color:red;
+            }
+            &_2{
+                text-decoration: line-through;
+                color:rgba(0,0,0,0.6);
+            }
+        }
+        &_serves{
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            &_items{
+                width: 3rem;
+                height: 3rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                border:0.1rem solid rgba(0,0,0,0.7);
+                font-size: 1.5rem;
+                margin-right: 1rem;
+                cursor: pointer;
+                &.active{
+                    color:white;
+                    background-color: #850A44;
+                    border:none;
+                }
+            }
+        }
+        &_button{
+            margin-top:2.5rem;
+            text-align: center;
+            @include desktopHigh{
+                text-align: start;
+            }
+            & > button{
+                width: 30rem;
+                height: 5.5rem;
+                cursor: pointer;
+                background-color: #850A44;
+                color:white;
+                border:none;
+                border-radius: 1rem;
+                font-size: 1.6rem;
+            }
         }
     }
 }

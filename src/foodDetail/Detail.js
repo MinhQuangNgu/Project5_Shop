@@ -4,6 +4,12 @@ import "./style.scss";
 const Detail = () => {
     const { slug } = useParams();
 
+    const [quantity, setQuantity] = useState(1);
+
+    const clipPath = {
+        clipPath: "inset(0% 20% 0% 0%)",
+    };
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [slug]);
@@ -81,10 +87,12 @@ const Detail = () => {
                                     </i>
                                 </div>
                                 <div className="detail_infor_title">
-                                    <h2>Bánh Gà Thần Thánh</h2>
+                                    <h2>
+                                        Bánh Gà Thần Thánh Bánh Gà Thần Thánh
+                                    </h2>
                                 </div>
                                 <div className="detail_infor_likes">
-                                    <div>
+                                    <div className="detail_infor_likes_like">
                                         <i
                                             style={{
                                                 fontSize: "1.2rem",
@@ -94,6 +102,114 @@ const Detail = () => {
                                         ></i>
                                         Yêu thích
                                     </div>
+                                    <div className="detail_infor_likes_star">
+                                        <i className="fa-regular fa-star"></i>
+                                        <i className="fa-regular fa-star"></i>
+                                        <i className="fa-regular fa-star"></i>
+                                        <i className="fa-regular fa-star"></i>
+                                        <i className="fa-regular fa-star"></i>
+                                        <div
+                                            style={clipPath}
+                                            className="detail_infor_likes_star-color"
+                                        >
+                                            <i className="fa-solid fa-star"></i>
+                                            <i className="fa-solid fa-star"></i>
+                                            <i className="fa-solid fa-star"></i>
+                                            <i className="fa-solid fa-star"></i>
+                                            <i className="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div className="detail_infor_likes_number">
+                                        <i>12 lượt đánh giá</i>
+                                    </div>
+                                </div>
+                                <div className="detail_infor_information">
+                                    <span>
+                                        Thực phẩm, cũng gọi là thức ăn là bất kỳ
+                                        vật phẩm nào, bao gồm chủ yếu các chất:
+                                        chất bột, chất béo, chất đạm, khoáng
+                                        chất, hoặc nước, mà con người hay động
+                                        vật có thể ăn hay uống được, với mục
+                                        đích cơ bản là thu nạp các chất dinh
+                                        dưỡng nhằm nuôi dưỡng cơ thể hay vì sở
+                                        thích.
+                                    </span>
+                                </div>
+                                {/* <div className="detail_infor_price">
+                                    <i>120,000 đ</i>
+                                </div> */}
+                                <div className="detail_infor_price_2">
+                                    <i className="detail_infor_price_2_1">
+                                        120,000 đ
+                                    </i>
+                                    <i className="detail_infor_price_2_2">
+                                        200,000 đ
+                                    </i>
+                                </div>
+                                <div className="detail_infor_serves">
+                                    <div
+                                        onClick={() => {
+                                            setQuantity(1);
+                                        }}
+                                        className={
+                                            quantity === 1
+                                                ? "detail_infor_serves_items active"
+                                                : "detail_infor_serves_items"
+                                        }
+                                    >
+                                        1
+                                    </div>
+                                    <div
+                                        onClick={() => {
+                                            setQuantity(2);
+                                        }}
+                                        className={
+                                            quantity === 2
+                                                ? "detail_infor_serves_items active"
+                                                : "detail_infor_serves_items"
+                                        }
+                                    >
+                                        2
+                                    </div>
+                                    <div
+                                        onClick={() => {
+                                            setQuantity(3);
+                                        }}
+                                        className={
+                                            quantity === 3
+                                                ? "detail_infor_serves_items active"
+                                                : "detail_infor_serves_items"
+                                        }
+                                    >
+                                        3
+                                    </div>
+                                    <div
+                                        onClick={() => {
+                                            setQuantity(4);
+                                        }}
+                                        className={
+                                            quantity === 4
+                                                ? "detail_infor_serves_items active"
+                                                : "detail_infor_serves_items"
+                                        }
+                                    >
+                                        4
+                                    </div>
+                                    <div
+                                        onClick={() => {
+                                            setQuantity(5);
+                                        }}
+                                        className={
+                                            quantity === 5
+                                                ? "detail_infor_serves_items active"
+                                                : "detail_infor_serves_items"
+                                        }
+                                    >
+                                        5+
+                                    </div>
+                                </div>
+                                <div className="detail_infor_button">
+                                    <button>Thêm Vào Giỏ Hàng</button>
                                 </div>
                             </div>
                         </div>
