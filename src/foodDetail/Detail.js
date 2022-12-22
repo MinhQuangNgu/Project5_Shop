@@ -6,6 +6,8 @@ const Detail = () => {
 
     const [quantity, setQuantity] = useState(1);
 
+    const [type, setType] = useState(1);
+
     const clipPath = {
         clipPath: "inset(0% 20% 0% 0%)",
     };
@@ -211,6 +213,36 @@ const Detail = () => {
                                 <div className="detail_infor_button">
                                     <button>Thêm Vào Giỏ Hàng</button>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="detail_body">
+                    <div className="detail_body_navbar">
+                        <div className="detail_body_navbar_items">
+                            <div
+                                onClick={() => {
+                                    setType(1);
+                                }}
+                                className={
+                                    type === 1
+                                        ? "detail_body_navbar_items_item active"
+                                        : "detail_body_navbar_items_item"
+                                }
+                            >
+                                Cách Làm
+                            </div>
+                            <div
+                                onClick={() => {
+                                    setType(2);
+                                }}
+                                className={
+                                    type === 2
+                                        ? "detail_body_navbar_items_item active"
+                                        : "detail_body_navbar_items_item"
+                                }
+                            >
+                                Đánh Giá
                             </div>
                         </div>
                     </div>
