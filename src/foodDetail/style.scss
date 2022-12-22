@@ -288,9 +288,21 @@
                 padding:0.7rem;
                 outline: none;
                 &_wrap{
+                    position: relative;
                     @include desktopHigh{
                         padding:0 18rem;
                     }
+                }
+                &_abs{
+                    position: absolute;
+                    top:1.5rem;
+                    left:1.5rem;
+                    @include desktopHigh{
+                        top:1.5rem;
+                        left:19.5rem;
+                    }
+                    z-index: 10;
+                    color:rgba(0,0,0,0.5);
                 }
             }
         }
