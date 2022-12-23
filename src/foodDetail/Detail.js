@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import Comment from "../comment/Comment";
 import Rating from "./Rating";
 import "./style.scss";
 const Detail = () => {
@@ -262,6 +263,9 @@ const Detail = () => {
                             ></div>
                         )}
                         {type === 2 && <Rating />}
+                    </div>
+                    <div className="detail_body_comment">
+                        <Comment />
                     </div>
                 </div>
             </div>

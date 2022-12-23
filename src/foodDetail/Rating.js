@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import RatingCard from "../card/RatingCard";
 import "./style.scss";
 const Rating = () => {
     const [star, setStar] = useState(null);
@@ -65,6 +66,10 @@ const Rating = () => {
                 >
                     Bình luận tại đây
                 </div>
+            </div>
+            <div className="detail_body_infor_content_rating">
+                <RatingCard />
+                <RatingCard />
             </div>
         </div>
     );

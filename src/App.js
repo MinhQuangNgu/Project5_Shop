@@ -8,11 +8,11 @@ function App() {
         <Router>
             <div className="app_container">
                 <Routes>
-                    {publicRouter.map((item, index) => {
+                    {publicRouter.map((item) => {
                         const Page = item.element;
                         return item?.defaultLayout ? (
                             <Route
-                                key={index + "Router"}
+                                key={item.path + "Router"}
                                 element={
                                     <item.defaultLayout>
                                         <Page />

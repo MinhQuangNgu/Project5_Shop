@@ -103,3 +103,104 @@
         }
     }
 }
+.ratingCard{
+    width: 100%;
+    display: flex;
+    margin-bottom: 2.5rem;
+    &_img{
+        width: 5.5rem;
+        height: 5.5rem;
+        margin-top: 0.2rem;
+        border-radius: 50%;
+        overflow: hidden;
+        & > img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &_infor{
+        flex:1;
+        min-height: 10rem;
+        background-color: rgba(0,0,0,0.1);
+        margin-left: 1rem;
+        border-radius: 1rem;
+
+        &_name{
+            border-bottom: 0.1rem solid rgba(0,0,0,0.1);
+            padding:1rem;
+            font-family: "Noto Sans", sans-serif;
+            font-weight: 800;
+            display: flex;
+        }
+        &_rate{
+            display: flex;
+            margin-left: 1.5rem;
+            font-size: 1.8rem;
+            color:#FF8A08;
+            &_star{
+                position: relative;
+                &-color{
+                    position: absolute;
+                    top:0;
+                    left:0;
+                }
+            }
+        }
+        &_content{
+            padding:1rem;
+            font-size: 1.7rem;
+            line-height: 2.7rem;
+        }
+    }
+}
+.commentCard{
+    width: 100%;
+    display: flex;
+    margin-bottom: 2rem;
+    &_img{
+        margin-top: 0.2rem;
+        & > img{
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50%;
+        }
+    }
+    &_infor{
+       flex:1;
+       min-height: 10rem;
+       background-color: rgba(0,0,0,0.1);
+       border-radius: 1rem;
+       margin-left: 1rem;
+        &_title{
+                padding:1rem;
+                border-bottom: 0.1rem solid rgba(0,0,0,0.1);
+                font-size: 1.7rem;
+                font-family: "Noto Sans", sans-serif;
+                font-weight: 800;
+        }
+        &_content{
+                padding:1rem;
+                font-size: 1.7rem;
+                line-height: 2.7rem;
+        }
+    }
+    &_navbar{
+        margin-left: 2rem;
+        margin-top: 0.4rem;
+        display: flex;
+        &_items{
+            margin-right: 1rem;
+            font-size: 1.3rem;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        &_items:first-child{
+            color:#56CCF2;
+        }
+        &_items:last-child{
+            cursor: text;
+            font-weight: 500;
+            color:rgba(0,0,0,0.6);
+        }
+    }
+}

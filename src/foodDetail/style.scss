@@ -305,6 +305,13 @@
                     color:rgba(0,0,0,0.5);
                 }
             }
+            &_rating{
+                margin-top: 4rem;
+                width: 100%;
+            }
         }
+    }
+    &_comment{
+        margin-top: 5rem;
     }
 }
