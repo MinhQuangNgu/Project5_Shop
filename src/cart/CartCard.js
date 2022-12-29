@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const CartCard = () => {
     const [love, setLove] = useState(false);
@@ -15,15 +16,26 @@ const CartCard = () => {
                 ></i>
             </div>
             <div className="cart_wrap_card_image">
-                <img
-                    src="https://znews-photo.zingcdn.me/w660/Uploaded/neg_esfjeee/2019_03_15/top32quananngonodanang_1.jpg"
-                    alt="Giỏ hàng"
-                />
+                <Link className="cart_wrap_card_image_wrap" to="/">
+                    <img
+                        className="card_wrap_card_image_detail"
+                        src="https://znews-photo.zingcdn.me/w660/Uploaded/neg_esfjeee/2019_03_15/top32quananngonodanang_1.jpg"
+                        alt="Giỏ hàng"
+                    />
+                </Link>
             </div>
             <div className="cart_wrap_card_title">
                 <div>
                     <div>
-                        <h2>Bánh tráng trộn không đường không nhân</h2>
+                        <Link
+                            style={{
+                                textDecoration: "none",
+                                color: "rgba(0,0,0,0.6)",
+                            }}
+                            to="/"
+                        >
+                            <h2>Bánh tráng trộn không đường không nhân</h2>
+                        </Link>
                     </div>
                     <div>
                         <img

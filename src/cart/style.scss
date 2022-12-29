@@ -3,7 +3,8 @@
     width: 100%;
     min-height: calc(100vh - 14rem - 5rem);
     &_container{
-        margin-top: 2rem;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
     }
     &_wrap{
         width: 100%;
@@ -12,7 +13,7 @@
         border-radius: 1rem;
         &_title{
             width: 100%;
-            height: 7rem;
+            height: 9rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -55,13 +56,11 @@
             &_image{
                 width: 16%;
                 height: 100%;
-                display: flex;
-                align-items: center;
-                & > img{
+                &_wrap{
                     width: 100%;
-                    height: 80%;
-                    object-fit: cover;
-                    border-radius: 0.5rem;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
                 }
             }
             &_title{
@@ -71,7 +70,6 @@
                 margin-left: 3%;
                 margin-right: 3%;
                 flex-wrap: wrap;
-                color:rgba(0,0,0,0.6);
                 font-size: 2rem;
                 @include mobile{
                     font-size: 1.2rem;
@@ -157,4 +155,10 @@
             border-bottom: none;
         }
     }
+}
+.card_wrap_card_image_detail{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 0.5rem;
 }
