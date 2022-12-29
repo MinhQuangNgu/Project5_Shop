@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./style.scss";
 import Select from "react-select";
 import Card from "../card/Card";
+import Pagination from "../paginating/Pagination";
 const Searching = () => {
     const options = [
         { value: "ha-noi", label: "Hà Nội" },
@@ -98,6 +99,9 @@ const Searching = () => {
                                 <Card />
                             </div>
                         </div>
+                    </div>
+                    <div className="search_wrap_paginating">
+                        <Pagination />
                     </div>
                 </div>
             </div>

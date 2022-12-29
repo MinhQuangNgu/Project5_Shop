@@ -5,6 +5,9 @@
     min-height: calc(100vh - 18rem);
     &_wrap{
         margin-top: 4rem;
+        &_paginating{
+            margin-top: 3rem;
+        }
         &_card{
             margin-top: 3rem;
         }
