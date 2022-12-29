@@ -9,6 +9,9 @@
     box-shadow: 0 0 0.2rem 0.1rem rgba(0,0,0,0.2);
     overflow: hidden;
     position: relative;
+    @include desktop{
+        height: 27rem;
+    }
     @include middleSmall{
         height: 40rem;
     }
@@ -66,6 +69,9 @@
                 padding:0 1.5rem;
                 font-size: 1.8rem;
             }
+            @include desktop{
+                font-size: 1rem;
+            }
             &_old{
                 color:red;
             }
@@ -77,6 +83,9 @@
                 }
                 @include middleSmall{
                     font-size: 2.5rem;
+                }
+                @include desktop{
+                    font-size: 1.4rem;
                 }
             }
         }
