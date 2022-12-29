@@ -39,7 +39,10 @@ const Header = () => {
                                     <Link className="header_auth_link" to="/">
                                         Đăng Nhập
                                     </Link>
-                                    <Link className="header_auth_link" to="/">
+                                    <Link
+                                        className="header_auth_link"
+                                        to="/cart"
+                                    >
                                         <i className="fa-solid fa-cart-shopping"></i>
                                         <div className="header_auth_link_number">
                                             0

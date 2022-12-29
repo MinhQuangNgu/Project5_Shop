@@ -27,9 +27,14 @@ const HeaderMobile = () => {
                 </Link>
             </div>
             <div className="header_mobile_cart">
-                <div className="header_mobile_cart_container">
-                    <i className="fa-solid fa-cart-shopping"></i>
-                </div>
+                <Link
+                    style={{ textDecoration: "none", color: "black" }}
+                    to="/cart"
+                >
+                    <div className="header_mobile_cart_container">
+                        <i className="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </Link>
             </div>
             <HeaderMobileA type={type} setType={setType} />
             <HeaderMobileD setType={setType} type={type} />
