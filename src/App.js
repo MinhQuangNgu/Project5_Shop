@@ -21,7 +21,11 @@ function App() {
                                 path={item.path}
                             />
                         ) : (
-                            <Route path={item.path} element={<Page />} />
+                            <Route
+                                key={item.path + "Router"}
+                                path={item.path}
+                                element={<Page />}
+                            />
                         );
                     })}
                 </Routes>
