@@ -1,3 +1,4 @@
+import Login from "../auth/Login";
 import Cart from "../cart/Cart";
 import DefaultLayout from "../components/defaultLayout/DefaultLayout";
 import Detail from "../foodDetail/Detail";
@@ -18,6 +19,10 @@ export const publicRouter = [
         element: Searching,
         path: "/tim-kiem",
         defaultLayout: DefaultLayout,
+    },
+    {
+        element: Login,
+        path: "/login",
     },
     {
         element: Detail,

@@ -33,10 +33,16 @@ const Header = () => {
                             </div>
                             <div className="col c-0 m-0 l-2-4">
                                 <div className="header_auth">
-                                    <Link className="header_auth_link" to="/">
+                                    <Link
+                                        className="header_auth_link"
+                                        to="/register"
+                                    >
                                         Đăng Ký
                                     </Link>
-                                    <Link className="header_auth_link" to="/">
+                                    <Link
+                                        className="header_auth_link"
+                                        to="/login"
+                                    >
                                         Đăng Nhập
                                     </Link>
                                     <Link

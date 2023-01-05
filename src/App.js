@@ -21,7 +21,7 @@ function App() {
                                 path={item.path}
                             />
                         ) : (
-                            <Route path="/" element={<Page />} />
+                            <Route path={item.path} element={<Page />} />
                         );
                     })}
                 </Routes>
